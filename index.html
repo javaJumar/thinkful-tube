@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Thinkful Tube</title>
+	<title>ThinkfulTube</title>
 	<link rel="stylesheet" type="text/css" href="./styles.css">
-	<script type="text/javascript" src="./index.js"></script>
-	<script type="text/javascript" src="./apikey.js"></script>
 </head>
 <body>
-
+	<header role ='banner' class="top-title">
+		<img src='https://i.vimeocdn.com/portrait/8990123_640x640' class="thinkful" alt="Thinkful icon"></img>
+		<h1 class="heading">Welcome to ThinkfulTube</h1>
+	</header>
+	<main role='main' class="main-content">
+		<h2 class="search-message">Search for any videos of interest:</h2>
+		<form action="#" class="search-form">
+            <label for="query"></label>
+            <input type="text" class="query-input" placeholder='  e.g. iPhone XI'>
+            <button class="submit-button" type="submit">Search</button>
+          </form>
+        <h2 class="results">Results:</h2>
+        <div class="search-results"></div>
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="./apikey.js"></script> -->
+	<script type="text/javascript" src="./index.js"></script>
 </body>
 </html>

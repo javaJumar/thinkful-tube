@@ -1,0 +1,42 @@
+header{
+	text-align: center;
+	padding-top: 50px;
+}
+.heading{
+	text-align: center;
+	padding: 10px;
+	display: inline-block;
+}
+
+.thinkful {
+	height: 60px; 
+	width: 60px;
+	display: inline-block;
+}
+
+.search-message{
+	text-align: center;
+	padding-top: 25px;
+}
+
+.search-form{
+	text-align: center;
+}
+
+.query-input{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 25px;
+    width: 225px;
+    border-radius: 30px;
+    border: 2px solid #0066ff;
+    font-size: 15px;
+    padding: 0 10px;
+}
+
+button{
+	margin-top: 10px;
+	border: 2px solid #0066ff;
+	border-radius: 10px;
+}
