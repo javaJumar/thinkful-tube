@@ -12,26 +12,28 @@ function getDataFromApi(searchTerm, callback) {
 
 let RESULT_HTML_TEMPLATE = (
   `<div class='video-list'>
-     <p class='video-title'></p><a class="js-image-link" href=""><img class="js-image" src=""></a>
-  </div>
-`
-);
+	 <p class='video-title'></p>
+	 <a class="js-image-link" href=""><img class="js-image" src="" alt=""></a>
+    </div>
+`);
 
 //how to render the API results to the browser 
 function renderResult(result){
   let template = $(RESULT_HTML_TEMPLATE);
   template.find(".js-image").attr("src", result.snippet.thumbnails.medium.url);
+  template.find('.js-image').attr("alt", result.snippet.title);
   template.find(".js-image-link").attr("href", 
   'https://www.youtube.com/watch?v=' + result.id.videoId);
-  template.find('p').html(result.snippet.title);
-  console.log(result);
+  template.find('.video-title').html(result.snippet.title);
   return template;
 }
 
 // show Youtube search results 
 function youTubeSearchData(data){
 	const searchResults = data.items.map((item, index) => renderResult(item));
-	$('.search-results').html(searchResults);  
+	const numResults = data.items.length;
+	$('.video-number').html(`<p id="num-results">   Number of Results: ${numResults} Videos</p>`).prop('hidden', false);
+	$('.search-results').html(searchResults).prop('hidden', false);
 	}
 
 //what happens when you click the search button
